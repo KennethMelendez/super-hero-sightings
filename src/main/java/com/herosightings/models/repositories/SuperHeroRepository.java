@@ -1,10 +1,10 @@
 package com.herosightings.models.repositories;
 
+import com.herosightings.models.Response;
 import com.herosightings.models.SuperHero;
 
 public interface SuperHeroRepository {
 
-    public SuperHero getById(Long id);
-
+    Response getById(Long id);
 
 }
