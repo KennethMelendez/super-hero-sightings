@@ -5,6 +5,8 @@ import lombok.Data;
 import org.springframework.lang.NonNull;
 import org.springframework.lang.Nullable;
 
+import java.util.List;
+
 @Data
 public class SuperHero {
 
@@ -18,6 +20,6 @@ public class SuperHero {
 
     private Location superHeroFoundlocation;
 
-    private SuperPowerTypes[] superPowers;
+    private List<SuperPowers> superPowers;
 
 }
