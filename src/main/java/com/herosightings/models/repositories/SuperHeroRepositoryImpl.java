@@ -36,12 +36,37 @@ public class SuperHeroRepositoryImpl implements SuperHeroRepository{
 
     @Override
     public Response addSuperHero(SuperHero currentSuperHero) {
+
+        Response response = new Response();
+
+        superHeroCollection.put(currentSuperHero.getId(), currentSuperHero);
+
+        response.setSuperHeroList(superHeroCollection);
+        response.setIsSuccessful(true);
+        response.setErrorMessage(null);
+
         return null;
     }
 
     @Override
     public Response removeSuperHeroById(Long id) {
-        return null;
+
+        Response response = new Response();
+
+        try {
+
+            superHeroCollection.remove(id);
+            response.setSuperHeroList(superHeroCollection);
+            response.setIsSuccessful(true);
+
+        } catch (Exception exception) {
+
+            response.setErrorMessage(exception.getMessage());
+            response.setIsSuccessful(false);
+
+        }
+
+        return response;
     }
 
     @Override
@@ -51,7 +76,14 @@ public class SuperHeroRepositoryImpl implements SuperHeroRepository{
 
     @Override
     public Response getAllSuperHeros() {
-        return null;
+
+        Response response = new Response();
+
+            response.setSuperHeroList(superHeroCollection);
+            response.setErrorMessage(null);
+            response.setIsSuccessful(true);
+
+        return response;
     }
 
     @Override
