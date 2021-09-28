@@ -1,5 +1,6 @@
 package com.herosightings.models.repositories;
 
+import com.herosightings.models.Location;
 import com.herosightings.models.Response;
 import com.herosightings.models.SuperHero;
 
@@ -31,5 +32,30 @@ public class SuperHeroRepositoryImpl implements SuperHeroRepository{
         }
 
         return response;
+    }
+
+    @Override
+    public Response addSuperHero(SuperHero currentSuperHero) {
+        return null;
+    }
+
+    @Override
+    public Response removeSuperHeroById(Long id) {
+        return null;
+    }
+
+    @Override
+    public Response updateSuperHeroById(Long id) {
+        return null;
+    }
+
+    @Override
+    public Response getAllSuperHeros() {
+        return null;
+    }
+
+    @Override
+    public Response getSuperHerosByLocations(Location location) {
+        return null;
     }
 }
